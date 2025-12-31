@@ -1,6 +1,5 @@
 package com.demo.hotel_reservation_api.infrastructure.security;
 
-import com.demo.hotel_reservation_api.domain.exception.UserNotFoundException;
 import com.demo.hotel_reservation_api.domain.model.User;
 import com.demo.hotel_reservation_api.domain.repository.UserRepository;
 import com.demo.hotel_reservation_api.domain.valueobject.Email;

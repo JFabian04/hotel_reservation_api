@@ -1,4 +1,6 @@
-package com.demo.hotel_reservation_api.domain.exception;
+package com.demo.hotel_reservation_api.domain.exception.auth;
+
+import com.demo.hotel_reservation_api.domain.exception.DomainException;
 
 /**
  * Thrown when a requested user cannot be found in the system.

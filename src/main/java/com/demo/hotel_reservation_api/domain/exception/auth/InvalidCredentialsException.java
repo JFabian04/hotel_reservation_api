@@ -1,4 +1,6 @@
-package com.demo.hotel_reservation_api.domain.exception;
+package com.demo.hotel_reservation_api.domain.exception.auth;
+
+import com.demo.hotel_reservation_api.domain.exception.DomainException;
 
 /**
  * Exception thrown when user authentication fails due to invalid credentials.

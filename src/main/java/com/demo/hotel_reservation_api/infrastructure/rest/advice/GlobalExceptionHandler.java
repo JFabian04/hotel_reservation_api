@@ -1,6 +1,12 @@
 package com.demo.hotel_reservation_api.infrastructure.rest.advice;
 
 import com.demo.hotel_reservation_api.domain.exception.*;
+import com.demo.hotel_reservation_api.domain.exception.auth.InvalidCredentialsException;
+import com.demo.hotel_reservation_api.domain.exception.auth.InvalidEmailException;
+import com.demo.hotel_reservation_api.domain.exception.auth.UserAlreadyExistsException;
+import com.demo.hotel_reservation_api.domain.exception.auth.UserNotFoundException;
+import com.demo.hotel_reservation_api.domain.exception.room.RoomAlreadyExistsException;
+import com.demo.hotel_reservation_api.domain.exception.room.RoomNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -89,5 +95,26 @@ public class GlobalExceptionHandler {
 
         ex.printStackTrace();
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(error);
+    }
+
+    // === ROOM EXCEPTION
+    @ExceptionHandler(RoomNotFoundException.class)
+    public ResponseEntity<ErrorResponse> handleRoomNotFound(RoomNotFoundException ex) {
+        ErrorResponse error = new ErrorResponse(
+                HttpStatus.NOT_FOUND.value(),
+                ex.getMessage(),
+                LocalDateTime.now()
+        );
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
+    }
+
+    @ExceptionHandler(RoomAlreadyExistsException.class)
+    public ResponseEntity<ErrorResponse> handleRoomAlreadyExists(RoomAlreadyExistsException ex) {
+        ErrorResponse error = new ErrorResponse(
+                HttpStatus.CONFLICT.value(),
+                ex.getMessage(),
+                LocalDateTime.now()
+        );
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(error);
     }
 }

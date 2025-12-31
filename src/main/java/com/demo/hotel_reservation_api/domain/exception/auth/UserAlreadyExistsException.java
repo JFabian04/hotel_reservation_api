@@ -1,4 +1,6 @@
-package com.demo.hotel_reservation_api.domain.exception;
+package com.demo.hotel_reservation_api.domain.exception.auth;
+
+import com.demo.hotel_reservation_api.domain.exception.DomainException;
 
 /**
  * Thrown when attempting to register a user with an existing email/username.

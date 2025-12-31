@@ -1,0 +1,9 @@
+package com.demo.hotel_reservation_api.domain.model.enums;
+
+public enum ReservationStatus {
+    PENDING,
+    CONFIRMED,
+    CANCELLED,
+    COMPLETED;
+
+}

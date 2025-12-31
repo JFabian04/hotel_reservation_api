@@ -12,12 +12,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.Optional;
 
-/**
- * Adaptador que implementa el puerto UserRepository del dominio
- * Usa JPA por debajo, pero el dominio no lo sabe
- *
- * Este es el "Adapter" en Hexagonal Architecture
- */
 @Component
 @RequiredArgsConstructor
 public class UserRepositoryAdapter implements UserRepository {

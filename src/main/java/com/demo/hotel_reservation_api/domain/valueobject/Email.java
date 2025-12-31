@@ -1,6 +1,6 @@
 package com.demo.hotel_reservation_api.domain.valueobject;
 
-import com.demo.hotel_reservation_api.domain.exception.InvalidEmailException;
+import com.demo.hotel_reservation_api.domain.exception.auth.InvalidEmailException;
 import java.util.regex.Pattern;
 
 /**

@@ -5,7 +5,6 @@ import com.demo.hotel_reservation_api.application.dto.response.AuthResponse;
 import com.demo.hotel_reservation_api.application.dto.response.UserResponse;
 import com.demo.hotel_reservation_api.application.port.PasswordEncoder;
 import com.demo.hotel_reservation_api.application.port.TokenProvider;
-import com.demo.hotel_reservation_api.domain.exception.UserAlreadyExistsException;
 import com.demo.hotel_reservation_api.domain.model.User;
 import com.demo.hotel_reservation_api.domain.model.enums.UserRole;
 import com.demo.hotel_reservation_api.domain.repository.UserRepository;

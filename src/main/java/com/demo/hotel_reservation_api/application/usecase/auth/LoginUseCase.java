@@ -5,7 +5,7 @@ import com.demo.hotel_reservation_api.application.dto.response.AuthResponse;
 import com.demo.hotel_reservation_api.application.dto.response.UserResponse;
 import com.demo.hotel_reservation_api.application.port.PasswordEncoder;
 import com.demo.hotel_reservation_api.application.port.TokenProvider;
-import com.demo.hotel_reservation_api.domain.exception.InvalidCredentialsException;
+import com.demo.hotel_reservation_api.domain.exception.auth.InvalidCredentialsException;
 import com.demo.hotel_reservation_api.domain.model.User;
 import com.demo.hotel_reservation_api.domain.repository.UserRepository;
 import com.demo.hotel_reservation_api.domain.valueobject.Email;

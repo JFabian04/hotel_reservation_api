@@ -18,7 +18,7 @@ public class UserEntityMapper {
                 user.getId(),
                 user.getFirstname(),
                 user.getLastname(),
-                user.getEmail().value(),  // Extraer string del Value Object
+                user.getEmail().value(),
                 user.getPassword(),
                 user.getRole()
         );
@@ -29,7 +29,7 @@ public class UserEntityMapper {
                 entity.getId(),
                 entity.getFirstName(),
                 entity.getLastName(),
-                new Email(entity.getEmail()),  // Crear Value Object
+                new Email(entity.getEmail()),
                 entity.getPassword(),
                 entity.getRole()
         );
